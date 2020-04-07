@@ -15,34 +15,33 @@ class Configuration {
         return docsite
     }
     String getBuildName() {
-        if (branch != 'master')
-            return "${ARTIFACTORY_BUILD_NAME} (${branch})"
-        return ARTIFACTORY_BUILD_NAME
-    }
-    String setBranch(String branch) {
-        this.branch = branch
+        return "${ARTIFACTORY_BUILD_NAME} (${branch})"
     }
     boolean getDefaultPublish() {
-        return ((branch == 'master') || (branch == 'staging'))
+        return defaultPublish
+    }
+    void setBranch(String branch) {
+        this.branch = branch
     }
     String dockerRepo
     String deploymentCredentials
     String docsite
+    String defaultPublish
     String branch
-    Configuration(dockerRepo,deploymentCredentials, docsite) {
+    Configuration(dockerRepo,deploymentCredentials, docsite, defaultPublish) {
         this.dockerRepo = dockerRepo
         this.deploymentCredentials = deploymentCredentials
         this.docsite = docsite
-        this.branch = branch
+        this.defaultPublish = defaultPublish
     }
 }
-def CONFIG = [
-    master: new Configuration('docsite','docsite-production', '10.10.0.4'),
-    staging: new Configuration('docsite-dev', 'docsite-staging', 'docs-staging.corda.net')
-]
-Configuration config = CONFIG[(env.BRANCH_NAME =~ /^PR-[0-9]+$/)? 'pr': env.BRANCH_NAME]
-if (!config)
-    config = CONFIG['staging']
+
+Configuration config
+switch (env.BRANCH_NAME) {
+    case ~/publish-.*$/: config = new Configuration('docsite','docsite-production', '10.10.0.4', true); break;
+    case "master": config = new Configuration('docsite-dev', 'docsite-staging', 'docs-staging.corda.net', true);
+    default: config = new Configuration('docsite-dev', 'docsite-staging', 'docs-staging.corda.net', false);
+}
 config.branch = env.BRANCH_NAME
 
 def MAKE_PARAMS = [
