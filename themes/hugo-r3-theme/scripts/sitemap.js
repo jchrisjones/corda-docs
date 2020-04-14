@@ -10,7 +10,7 @@ export function scrollOffset() {
         // Are we a url that ends with '#some-anchor'?
         // ...and we're an anchor in the current page.
         // Otherwise we break every link with an anchor...
-        if(e.target.hash && e.target.pathname === window.location.pathname ) {
+       if(e.target.hash && e.target.pathname === window.location.pathname ) {
             e.preventDefault();
             if(window.location.hash !== e.target.hash){
                 window.location.hash = e.target.hash;
@@ -42,8 +42,6 @@ export function clickLinkOnNavExpandDropDown() {
             }
         });
     }
-
-
 }
 
 export function uncheckDropDownOnClick(){

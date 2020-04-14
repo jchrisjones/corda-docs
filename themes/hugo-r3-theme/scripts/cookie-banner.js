@@ -1,5 +1,7 @@
 import CookiesEuBanner from 'cookies-eu-banner';
 
 export function cookieBanner() {
-	console.log('wibble');
+	new CookiesEuBanner(function () {
+		console.log('wibble');
+	}, true)
 }
