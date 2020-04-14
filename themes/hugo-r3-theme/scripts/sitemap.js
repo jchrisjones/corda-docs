@@ -30,27 +30,32 @@ export function scrollOffset() {
 
 export function clickLinkOnNavExpandDropDown() {
     let docsNav = document.querySelector('.r3-o-docs-nav');
-    docsNav.addEventListener('click', e => {
-        if(e.target.type === "checkbox"){
-            let nodes = e.target.parentElement.children;
-            for(let node of nodes){
-                if(node.href && node.href !== window.location.href){
-                    window.location.href = node.href;
+    if(docsNav){
+        docsNav.addEventListener('click', e => {
+            if(e.target.type === "checkbox"){
+                let nodes = e.target.parentElement.children;
+                for(let node of nodes){
+                    if(node.href && node.href !== window.location.href){
+                        window.location.href = node.href;
+                    }
                 }
             }
-        }
-    });
+        });
+    }
+
+
 }
 
 export function uncheckDropDownOnClick(){
     let docsNav = document.querySelector('.r3-o-docs-nav');
-    let checkboxs = docsNav.querySelectorAll('input[type=checkbox]');
+    if(docsNav){
+        let checkboxs = docsNav.querySelectorAll('input[type=checkbox]');
 
-    for(let box of checkboxs){
-        if(window.location.pathname === box.dataset.url){
-            box.checked = false;
+        for(let box of checkboxs){
+            if(window.location.pathname === box.dataset.url){
+                box.checked = false;
+            }
         }
+        docsNav.style.display = "block";        
     }
-    docsNav.style.display = "block";
-
 }
