@@ -1,6 +1,9 @@
 <!-- This is the javascript that we build via yarn/webpack -->
 <script src="/js/vendor.js" type="application/javascript"></script>
 <script src="/js/app.js" type="application/javascript"></script>
+<template id='docsearch-script'>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js"></script>
+</template>
 
 {{ with .Page.Scratch.Get "needsMermaid" }}
 <script src="/js/mermaid.min.js"></script>

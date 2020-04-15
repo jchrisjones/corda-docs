@@ -12978,9 +12978,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bootstrap_init__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./bootstrap-init */ "./scripts/vendor/bootstrap-init.js");
- //import docsearch from "docsearch.js";
-// 'export' docsearch to the web page so we can call docsearch
-// window.docsearch = docsearch;
+
 
 /***/ })
 

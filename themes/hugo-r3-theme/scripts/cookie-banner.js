@@ -1,6 +1,5 @@
-import CookiesEuBanner from 'cookies-eu-banner';
+import CookiesEuBanner from './vendor/cookies-eu-banner';
 import { googleAnalytics } from './vendor/googleanalytics';
-import { docSearchInit } from './vendor/doc-search';
 
 export class DocsiteCookies {
 	constructor(){
@@ -120,14 +119,24 @@ export class DocsiteCookies {
         let cookieConcent = this.getCookie(this.name);
             for (let [key, value] of Object.entries(cookieConcent)) {
                 if(key === 'preferences' && value === true){
-                    import('./vendor/doc-search.js')
-                        .then(() => docSearchInit())
-                        .catch(err => console.log(err.message));
+                    injectDocsearch();
+                    // import('../s /docsearch.js')
+                    //     // then(doc => doc.docSearchInit())
+                    //     .catch(err => console.log(err.message));
                 }
                 if(key === 'statistics' && value === true){
                     googleAnalytics();
                 }
             }
+    }
+}
+
+function injectDocsearch() {
+    if ('content' in document.createElement('template')) {
+        let template = document.querySelector('#docsearch-script');
+        let body = document.querySelector("body");
+        var clone = template.content.cloneNode(true);
+        body.appendChild(clone);
     }
 }
 
