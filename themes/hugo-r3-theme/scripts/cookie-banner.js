@@ -1,5 +1,15 @@
 import CookiesEuBanner from './vendor/cookies-eu-banner';
 import { googleAnalytics } from './vendor/googleanalytics';
+import { docSearchInit } from './vendor/doc-search';
+
+const docsearchLoad = (resolve, reject) => {
+    const script = document.createElement('script');
+    document.body.appendChild(script);
+    script.onload = resolve;
+    script.onerror = reject;
+    script.async = true;
+    script.src="https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js";
+};
 
 export class DocsiteCookies {
 	constructor(){
@@ -119,24 +129,16 @@ export class DocsiteCookies {
         let cookieConcent = this.getCookie(this.name);
             for (let [key, value] of Object.entries(cookieConcent)) {
                 if(key === 'preferences' && value === true){
-                    injectDocsearch();
-                    // import('../s /docsearch.js')
-                    //     // then(doc => doc.docSearchInit())
-                    //     .catch(err => console.log(err.message));
+                    new Promise(docsearchLoad)
+                        .then( () => { 
+                            docSearchInit();
+                        })
+                        .catch( err => console.log(err));
                 }
                 if(key === 'statistics' && value === true){
                     googleAnalytics();
                 }
             }
-    }
-}
-
-function injectDocsearch() {
-    if ('content' in document.createElement('template')) {
-        let template = document.querySelector('#docsearch-script');
-        let body = document.querySelector("body");
-        var clone = template.content.cloneNode(true);
-        body.appendChild(clone);
     }
 }
 
@@ -151,3 +153,4 @@ function hasJsonStructure(str) {
         return false;
     }
 }
+  

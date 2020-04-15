@@ -4,6 +4,8 @@ export function googleAnalytics() {
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m); })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     // Don't forget to put your own UA-XXXXXXXX-X code
-    ga('create', 'UA-XXXXXXXX-X', 'auto');
-    ga('send', 'pageview');
+    window.ga('create', 'UA-XXXXXXXX-X', 'auto');
+    window.ga('send', 'pageview');
+
+    console.log('wibble');
 }

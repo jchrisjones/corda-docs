@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * Cookies EU banner v2.0.1 - Manage display of banner to accept/reject cookies from tracking services like Google Analytics
  * ------------------------
@@ -7,6 +8,8 @@
  *         Twitter : @AlexandreDemode
  *         Website : alex-d.fr
  */
+
+ 
 
 ; // jshint ignore:line
 (function (root, factory, undefined) {

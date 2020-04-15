@@ -13,5 +13,5 @@ document.addEventListener("DOMContentLoaded", function() {
     searchShortcut();
     clickLinkOnNavExpandDropDown();
     uncheckDropDownOnClick();
-    const cordaCookies = new DocsiteCookies();
+    new DocsiteCookies();
 });

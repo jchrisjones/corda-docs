@@ -31565,6 +31565,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_cookies_eu_banner__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor/cookies-eu-banner */ "./scripts/vendor/cookies-eu-banner.js");
 /* harmony import */ var _vendor_cookies_eu_banner__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_cookies_eu_banner__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _vendor_googleanalytics__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./vendor/googleanalytics */ "./scripts/vendor/googleanalytics.js");
+/* harmony import */ var _vendor_doc_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./vendor/doc-search */ "./scripts/vendor/doc-search.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -31586,6 +31587,17 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
 
+
+
+
+var docsearchLoad = function docsearchLoad(resolve, reject) {
+  var script = document.createElement('script');
+  document.body.appendChild(script);
+  script.onload = resolve;
+  script.onerror = reject;
+  script.async = true;
+  script.src = "https://cdn.jsdelivr.net/npm/docsearch.js@2.6.3/dist/cdn/docsearch.min.js";
+};
 
 var DocsiteCookies = /*#__PURE__*/function () {
   function DocsiteCookies() {
@@ -31741,9 +31753,11 @@ var DocsiteCookies = /*#__PURE__*/function () {
             value = _Object$entries$_i[1];
 
         if (key === 'preferences' && value === true) {
-          injectDocsearch(); // import('../s /docsearch.js')
-          //     // then(doc => doc.docSearchInit())
-          //     .catch(err => console.log(err.message));
+          new Promise(docsearchLoad).then(function () {
+            Object(_vendor_doc_search__WEBPACK_IMPORTED_MODULE_2__["docSearchInit"])();
+          })["catch"](function (err) {
+            return console.log(err);
+          });
         }
 
         if (key === 'statistics' && value === true) {
@@ -31755,15 +31769,6 @@ var DocsiteCookies = /*#__PURE__*/function () {
 
   return DocsiteCookies;
 }();
-
-function injectDocsearch() {
-  if ('content' in document.createElement('template')) {
-    var template = document.querySelector('#docsearch-script');
-    var body = document.querySelector("body");
-    var clone = template.content.cloneNode(true);
-    body.appendChild(clone);
-  }
-}
 
 function hasJsonStructure(str) {
   if (typeof str !== 'string') return false;
@@ -31808,7 +31813,7 @@ document.addEventListener("DOMContentLoaded", function () {
   Object(_search_shortcut__WEBPACK_IMPORTED_MODULE_4__["searchShortcut"])();
   Object(_sitemap__WEBPACK_IMPORTED_MODULE_2__["clickLinkOnNavExpandDropDown"])();
   Object(_sitemap__WEBPACK_IMPORTED_MODULE_2__["uncheckDropDownOnClick"])();
-  var cordaCookies = new _cookie_banner__WEBPACK_IMPORTED_MODULE_5__["DocsiteCookies"]();
+  new _cookie_banner__WEBPACK_IMPORTED_MODULE_5__["DocsiteCookies"]();
 });
 
 /***/ }),
@@ -32002,6 +32007,8 @@ function uncheckDropDownOnClick() {
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/* eslint-disable */
 
 /**
  * Cookies EU banner v2.0.1 - Manage display of banner to accept/reject cookies from tracking services like Google Analytics
@@ -32198,6 +32205,44 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
+/***/ "./scripts/vendor/doc-search.js":
+/*!**************************************!*\
+  !*** ./scripts/vendor/doc-search.js ***!
+  \**************************************/
+/*! exports provided: docSearchInit */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "docSearchInit", function() { return docSearchInit; });
+var algolia_appId = "UX2KMUWFAL";
+var algolia_apiKey = "1fe3367db02689b4aeebc59efad5abaf";
+var algolia_index = "docs.corda.net";
+var facetFilters = window.facetFilters;
+function docSearchInit() {
+  if (document.querySelector('#search-input')) {
+    //https://www.algolia.com/doc/api-reference/api-parameters/facetFilters/?language=javascript
+    var algoliaOptions = {
+      hitsPerPage: 5,
+      facetFilters: facetFilters
+    };
+
+    if (/404.html/.test(window.location.pathname)) {
+      delete algoliaOptions.facetFilters;
+    }
+
+    window.docsearch({
+      appId: algolia_appId,
+      apiKey: algolia_apiKey,
+      indexName: algolia_index,
+      inputSelector: "#search-input",
+      algoliaOptions: algoliaOptions
+    });
+  }
+}
+
+/***/ }),
+
 /***/ "./scripts/vendor/googleanalytics.js":
 /*!*******************************************!*\
   !*** ./scripts/vendor/googleanalytics.js ***!
@@ -32221,8 +32266,9 @@ function googleAnalytics() {
   })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); // Don't forget to put your own UA-XXXXXXXX-X code
 
 
-  ga('create', 'UA-XXXXXXXX-X', 'auto');
-  ga('send', 'pageview');
+  window.ga('create', 'UA-XXXXXXXX-X', 'auto');
+  window.ga('send', 'pageview');
+  console.log('wibble');
 }
 
 /***/ }),
