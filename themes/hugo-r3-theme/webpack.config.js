@@ -4,7 +4,8 @@ module.exports = [
     {
         entry: {
             app: ["./scripts", "./styles/scss/main.scss"],
-            vendor: "./scripts/vendor"
+            vendor: "./scripts/vendor",
+            "mermaid.min": "./node_modules/mermaid/dist/mermaid.min"
         },
         output: {
             path: path.resolve(__dirname, "./static/"),
