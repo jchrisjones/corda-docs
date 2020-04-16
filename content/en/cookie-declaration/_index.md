@@ -11,16 +11,16 @@ A cookie is a small file of letters and numbers that we store on your
 browser or the hard drive of your computer if you agree. Cookies contain
 information that is transferred to your computer’s hard drive. 
 
-#### We use the following types of cookies: 
+## We use the following types of cookies: 
 
-1.  **Strictly necessary cookies.** These are cookies that are required for the operation of our website. They include, for example, cookies that enable you to log into secure areas of our website,
+1. **Strictly necessary cookies.** These are cookies that are required for the operation of our website. They include, for example, cookies that enable you to log into secure areas of our website,
     use a shopping cart or make use of e-billing services.
 
-2.  **Analytical or performance cookies.** These allow us to recognise  and count the number of visitors and to see how visitors move around our website when they are using it. This helps us to improve the way our website works, for example, by ensuring that users are finding what they are looking for easily.
+2. **Analytical or performance cookies.** These allow us to recognise  and count the number of visitors and to see how visitors move around our website when they are using it. This helps us to improve the way our website works, for example, by ensuring that users are finding what they are looking for easily.
 
-3.  **Functionality cookies.** These are used to recognise you when you return to our website. This enables us to personalise our content for you, greet you by name and remember your preferences (for example, your choice of language or region).
+3. **Functionality cookies.** These are used to recognise you when you return to our website. This enables us to personalise our content for you, greet you by name and remember your preferences (for example, your choice of language or region).
 
-1.  **Targeting cookies.** These cookies record your visit to our website, the pages you have visited and the links you have followed. We will use this information to make our website and the advertising displayed on it more relevant to your interests. \[We may also share this information with third parties for this purpose.\]
+4. **Targeting cookies.** These cookies record your visit to our website, the pages you have visited and the links you have followed. We will use this information to make our website and the advertising displayed on it more relevant to your interests. \[We may also share this information with third parties for this purpose.\]
 
 You can find more information about the individual cookies we use and the purposes for which we use them in the table below:
 
@@ -56,7 +56,9 @@ You can find more information about the individual cookies we use and the purpos
         </p>
       </td>
       <td>
-        <strong>Expiry</strong>
+        <p>
+          <strong>Expiry</strong>
+        </p>
       </td>
       <td>
         <p>
@@ -127,7 +129,7 @@ You can find more information about the individual cookies we use and the purpos
 
 Please note that the following third parties may also use cookies, over which we have no control. These named third parties may include, for example, advertising networks and providers of external services like web traffic analysis services. These third party cookies are likely to be analytical cookies or performance cookies or targeting cookies:
 
-#### NAME THIRD PARTIES
+## \[NAME THIRD PARTIES\]
 
 To deactivate the use of such third party advertising cookies, please click here.
 

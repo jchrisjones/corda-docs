@@ -10555,10 +10555,10 @@ h6:hover .header-link:hover {
   border-radius: 3px;
   color: #fff;
   font-size: 13px;
-  left: 10px;
+  left: 3px;
   position: fixed;
   padding: 6px;
-  right: 10px;
+  right: 3px;
   text-align: center;
   top: 100px;
   z-index: 1000;
@@ -10635,7 +10635,7 @@ h6:hover .header-link:hover {
   margin-left: 3px;
 }
 
-@media screen and (min-width: 898px) {
+@media screen and (min-width: 768px) {
   #cookies-eu-banner {
     bottom: 5px;
     top: inherit;
