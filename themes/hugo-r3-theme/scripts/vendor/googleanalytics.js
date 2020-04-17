@@ -6,6 +6,4 @@ export function googleAnalytics() {
     // Don't forget to put your own UA-XXXXXXXX-X code
     window.ga('create', 'UA-XXXXXXXX-X', 'auto');
     window.ga('send', 'pageview');
-
-    console.log('wibble');
 }
