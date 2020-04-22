@@ -7,22 +7,31 @@ date: 2020-04-15T09:59:25Z
 
 # Cookie Declaration 
 
-A cookie is a small file of letters and numbers that we store on your
-browser or the hard drive of your computer if you agree. Cookies contain
-information that is transferred to your computer’s hard drive. 
+A cookie is a small file that we store on your browser or the hard drive of your computer if you agree.
 
 ## We use the following types of cookies: 
 
-1. **Strictly necessary cookies.** These are cookies that are required for the operation of our website. They include, for example, cookies that enable you to log into secure areas of our website,
-    use a shopping cart or make use of e-billing services.
+1. **Strictly necessary cookies.** These are cookies that are required for the operation of our website. They may
+    include, for example, cookies that enable you to log into secure areas of our website, use a shopping cart, or make
+    use of e-billing services.
 
-2. **Analytical or performance cookies.** These allow us to recognise  and count the number of visitors and to see how visitors move around our website when they are using it. This helps us to improve the way our website works, for example, by ensuring that users are finding what they are looking for easily.
+2. **Analytical or performance cookies.** These allow us to recognise and count the number of visitors, and to see how
+    visitors move around our website when they are using it. This helps us improve our website, for example, by ensuring
+    that users are finding what they are looking for easily.
 
-3. **Functionality cookies.** These are used to recognise you when you return to our website. This enables us to personalise our content for you, greet you by name and remember your preferences (for example, your choice of language or region).
+3. **Functionality cookies.** These are used to recognise you when you return to our website. This enables us to
+    personalise our content for you, greet you by name and remember your preferences (for example, your choice of
+    language or region).
 
-4. **Targeting cookies.** These cookies record your visit to our website, the pages you have visited and the links you have followed. We will use this information to make our website and the advertising displayed on it more relevant to your interests. \[We may also share this information with third parties for this purpose.\]
+## Third Party Cookies
 
-You can find more information about the individual cookies we use and the purposes for which we use them in the table below:
+Please note that the following third parties may also use cookies, over which we have no control. These named third parties may include, for example, advertising networks and providers of external services like web traffic analysis services. These third party cookies are likely to be analytical cookies or performance cookies or targeting cookies:
+
+- [Google analytics cookies](https://policies.google.com/technologies/cookies)
+- [Vimeo cookies](https://vimeo.com/cookie_policy/)
+- [Algolia search cookies](https://www.algolia.com/policies/cookies/)
+
+## Cookies we use
 
 <table>
   <colgroup>
@@ -66,79 +75,222 @@ You can find more information about the individual cookies we use and the purpos
         </p>
       </td>
     </tr>
-    <tr class="even">
-      <td style="vertical-align: top;" >
+    <tr>
+      <td>
         <p>
-          [COOKIE TITLE E.G. Strictly necessary cookies]
+        _ga
         </p>
       </td>
-      <td style="vertical-align: top;" >
+      <td>
         <p>
-          [COOKIE NAME E.G. ASP. NET\_SessionId or OptanonConsent]
+        _ga
         </p>
       </td>
-      <td style="vertical-align: top;" >
+      <td>
         <p>
-          [E.G. R3 OR THIRD PARTY]
+        www.docs.corda.net
         </p>
       </td>
-      <td style="vertical-align: top;" >
-        <p>
-          [DESCRIPTION OF THE PURPOSE FOR WHICH THE COOKIE IS USED ]
-        </p>
-        <p>
-          Examples of purposes for which a cook ie may be used :
-        </p>
-        <p>
-          This cook ie [is essential for our site to <strong>OR </strong> enables us to] :
-        </p>
-        <p>
-          [(a) Estimate our audience size and usage pattern.]
-        </p>
-        <p>
-          [(b) Store information about your preferences, and so allow us to customise our site and to provide you with offers that are targeted to your individual interests. ]
-        </p>
-        <p>
-          [(c) Speed up your searches.<br />]
-        </p>
-        <p>
-          [(d) Recognise you when you return to our site .]
-        </p>
-        <p>
-          [(e ) Allow you to use our site in a way that makes your browsing experience more convenient, for example, by allowing you to store items in an electronic shop ping bask et between visits. If you register with us or complete our online forms, we will use cookies to remember your details during your current visit, and any future visits provided the cook ie was not deleted in the interim.]
-        </p>
-        <p>
-          [(f) [OTHER PURPOSES] .]
-        </p>
+      <td>
+      <p>
+      This cookie enables necessary website functionality.
+      </p>
       </td>
-      <td style="vertical-align: top;" >
-        <p>
-          [E.G. SESSION / PERSISTENT / RELEVANT TIME PERIOD]
-        </p>
+      <td>
+      <p>
+      Two years.
+      </p>
       </td>
-      <td style="vertical-align: top;" >
-        <p>
-          [E. G. HTTP ]
-        </p>
-      </td>
+    <td>
+    First party cookie.
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p>
+    corda_cookie
+    </p>
+    </td>
+    <td>
+    <p>
+    corda_cookie
+    </p>
+    </td>
+    <td>
+    <p>
+    www.docs.corda.net
+    </p>
+    </td>
+    <td>
+      <p>
+      This cookie enables necessary website functionality.
+      </p>
+    </td>
+    <td>
+    <p>
+    One year.
+    </p>
+    </td>
+    <td>
+    First party cookie.
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p>
+    hasConsent
+    </p>
+    </td>
+    <td>
+    <p>
+    hasConsent
+    </p>
+    </td>
+    <td>
+    <p>
+    www.docs.corda.net
+    </p>
+    </td>
+    <td>
+      <p>
+      This cookie enables necessary website functionality.
+      </p>
+    </td>
+    <td>
+    <p>
+    One year.
+    </p>
+    </td>
+    <td>
+    First party cookie.
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p>
+    _ga
+    </p>
+    </td>
+    <td>
+    <p>
+    _ga
+    </p>
+    </td>
+    <td>
+    <p>
+    Google Analytics
+    </p>
+    </td>
+    <td>
+    <p>
+    A google analytics cookie used to distinguish users.
+    </p>
+    </td>
+    <td>
+    <p>
+    2 years.
+    </p>
+    </td>
+    <td>
+    Third party cookie.
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p>
+    _gid
+    </p>
+    </td>
+    <td>
+    <p>
+    _gid
+    </p>
+    </td>
+    <td>
+    <p>
+    Google Analytics
+    </p>
+    </td>
+    <td>
+    <p>
+    A google analytics cookie used to distinguish users.
+    </p>
+    </td>
+    <td>
+    <p>
+    24 hours.
+    </p>
+    </td>
+    <td>
+    <p>
+    Third party cookie.
+    </p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p>
+    _gat
+    </p>
+    </td>
+    <td>
+    <p>
+    _gat
+    </p>
+    </td>
+    <td>
+    Google Analytics
+    </td>
+    <td>
+    <p>
+    A google analytics cookie used to throttle request rate.
+    </p>
+    </td>
+    <td>
+    1 minute.
+    </td>
+    <td>
+    <p>
+    Third party cookie.
+    </p>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <p>
+    AMP_TOKEN
+    </p>
+    </td>
+    <td>
+    AMP_TOKEN
+    </td>
+    <td>
+    <p>
+    Google Analytics
+    </p>
+    </td>
+    <td>
+    <p>
+    A google analytics cookie that can be used to retrieve a client ID from the AMP client ID service.
+    </p>
+    </td>
+    <td>
+    <p>
+    30 seconds to 1 year.
+    </p>
+    </td>
+    <td>
+    <p>
+    Third party cookie.
+    </p>
+    </td>
     </tr>
   </tbody>
 </table>
 
-## Third Party Cookies
-
-Please note that the following third parties may also use cookies, over which we have no control. These named third parties may include, for example, advertising networks and providers of external services like web traffic analysis services. These third party cookies are likely to be analytical cookies or performance cookies or targeting cookies:
-
-## \[NAME THIRD PARTIES\]
-
-To deactivate the use of such third party advertising cookies, please click here.
-
 ## Legal Requirements
 
-The law requires that we only store cookies on your device if they are
-strictly necessary for the operation of this site. For all other types
-of cookies we need your permission. You can change or withdraw egr 5ds6
-at any time your consent by clicking here.
+The law requires that we only store cookies on your device if they are strictly necessary for the operation of this
+site. For all other types of cookies we need your permission.
 
-Learn more about who we are, how you can contact us and how we process
-personal data in our Privacy Policy.
+Learn more about who we are, how you can contact us and how we process personal data in our [privacy policy](https://www.r3.com/privacy-policy/).
