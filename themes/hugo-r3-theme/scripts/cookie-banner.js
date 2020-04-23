@@ -57,10 +57,10 @@ export class DocsiteCookies {
     }
 
     formToCookie(name, form) {
-        const aYear = 31104000000;
+        const thirteenMonthsInMils = 31104000000;
 
         let date = new Date();
-        date.setTime(date.getTime() + aYear);
+        date.setTime(date.getTime() + thirteenMonthsInMils);
 
         let formData = new FormData(form);
         for (var pair of formData.entries()) {
@@ -129,7 +129,7 @@ export class DocsiteCookies {
     setAdditionalServices() {
         let cookieConsent = this.getCookie(this.name);
         for (let [key, value] of Object.entries(cookieConsent)) {
-            if (key === 'preferences' && value === true) {
+            if (key === 'necessary' && value === true) {
                 new Promise(docsearchLoad)
                     .then(() => {
                         docSearchInit();
