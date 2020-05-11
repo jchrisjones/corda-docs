@@ -5,11 +5,11 @@ title: "Cookie Consent"
 date: 2020-04-15T09:59:25Z
 ---
 
-# Cookie Declaration 
+# Cookie Declaration
 
 A cookie is a small file that we store on your browser or the hard drive of your computer if you agree.
 
-## We use the following types of cookies: 
+## We use the following types of cookies:
 
 1. **Strictly necessary cookies.** These are cookies that are required for the operation of our website. They may
     include, for example, cookies that enable you to log into secure areas of our website, use a shopping cart, or make

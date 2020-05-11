@@ -10,35 +10,37 @@
     text-align: center;
     top: 100px;
     z-index: 1000;
-
-    h3, p {
+    h3,
+    p {
         color: #fff;
         letter-spacing: 0;
     }
-    
     h3 {
         font-size: 24px;
         font-weight: 400;
-        margin: 9px 0 0; 
+        margin: 9px 0 0;
         text-transform: uppercase;
     }
-    
     p {
         margin-bottom: 10px;
         padding: 8px 36px 0;
         text-align: justify;
         line-height: 1.4em;
     }
-
     legend {
         font-size: 18px;
         margin-bottom: 16px;
     }
+    a {
+        color: $blue-400;
+    }
 }
+
 .cookies-button-group {
     display: flex;
     justify-content: center;
 }
+
 #cookies-eu-accept,
 #cookies-eu-accept-all {
     background-color: $primary-01;
@@ -60,9 +62,7 @@
 }
 
 #cookies-eu-more:hover,
-#cookies-eu-more:focus {
-
-}
+#cookies-eu-more:focus {}
 
 #cookies-eu-reject {
     background: none;
@@ -73,6 +73,7 @@
     margin: 2px 0;
     border: 1px solid #666;
 }
+
 #cookies-eu-reject:hover,
 #cookies-eu-reject:focus {
     border-color: #fff;
@@ -83,7 +84,6 @@
 .cookies-checkbox {
     display: inline-block;
     margin: 5px 10px;
-
     label {
         font-size: 16px;
         margin-left: 3px;

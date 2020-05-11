@@ -125,7 +125,6 @@ export class DocsiteCookies {
         }
     }
 
-<<<<<<< HEAD
     setAdditionalServices() {
         let cookieConsent = this.getCookie(this.name);
         for (let [key, value] of Object.entries(cookieConsent)) {
@@ -138,21 +137,6 @@ export class DocsiteCookies {
             }
             if (key === 'statistics' && value === true) {
                 googleAnalytics();
-=======
-    setAdditionalServices(){
-        let cookieConcent = this.getCookie(this.name);
-            for (let [key, value] of Object.entries(cookieConcent)) {
-                if(key === 'necessary' && value === true){
-                    new Promise(docsearchLoad)
-                        .then( () => { 
-                            docSearchInit();
-                        })
-                        .catch( err => console.log(err));
-                }
-                if(key === 'statistics' && value === true){
-                    googleAnalytics();
-                }
->>>>>>> EG-1079: cookie declaration done
             }
         }
     }
